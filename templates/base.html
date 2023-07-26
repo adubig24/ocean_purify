@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <title>Le site de fou</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1><a href="{{url_for('index')}}">Incroyable design</a>
+            <img id='logo' src="{{url_for('static', filename = 'logo1.png')}}"></h1>
+        </div>
+    </header>
+
+    <article>
+        {% block content %} {% endblock %}
+    </article>
+</body>
+</html>
