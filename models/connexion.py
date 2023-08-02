@@ -5,7 +5,7 @@ class Connexion:
     __PWD = 'example'
     __HOST = 'localhost'
     __PORT = '3307'
-    __DB = 'form_test'
+    __DB = 'plateforme_de_don'
     __bdd = None
     __cursor = None
 

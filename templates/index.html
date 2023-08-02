@@ -1,9 +1,13 @@
 {% extends 'base.html'%}
 
 {% block content %}
+<section>
+    <div id="description">
+        OceanPurify est une organisation internationale à but non lucratif dédiée à la préservation et au nettoyage des océans. Leur mission est de protéger la vie marine et de préserver les écosystèmes océaniques en se concentrant sur la purge et le recyclage des déchets marins. Ils s'efforcent de sensibiliser le public aux problèmes de pollution plastique dans les océans et de mettre en œuvre des projets concrets pour restaurer la santé des écosystèmes marins.
+    </div>
 
     <p>
-        Accéder au <a href="{{url_for('form')}}">formulaire </a>
+        <a href="{{url_for('form')}}">Faire un don</a>
     </p>
-
+</section>
 {% endblock %}

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from models.data import Data
+from models.don import Don
 
 app = Flask(__name__)
 
@@ -14,12 +15,13 @@ def form():
 @app.route('/resultat', methods=['POST'])
 def resultat():
     nom=request.values.get('nom')
-    telephone=request.values.get('telephone')
+    prenom=request.values.get('prenom')
     email=request.values.get('email')
-    age=request.values.get('age')
-    sexe=request.values.get('sexe')
+    adresse=request.values.get('adresse')
+    don=request.values.get('don')
     comments=request.values.get('comments')
-    Data.stocker(nom,telephone,email,age,sexe,comments)
+    donateur=Don(nom, prenom, email, adresse, don, comments)
+    Data.stocker(donateur)
     return render_template('resultat.html', nom=nom)
 
 if __name__=='__main__':
