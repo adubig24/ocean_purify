@@ -2,31 +2,49 @@
 
 {% block content %}
 <br>
-<section>
     <div id="description">
-        Bienvenue chez OceanPurify, une association caritative dédiée à la préservation des océans et à la protection de la vie marine. Notre mission est claire et urgente : restaurer les océans en purifiant les déchets marins tout en préservant la vie qui en dépend.
+        <p id="description_text">
+            Bienvenue chez OceanPurify, une association caritative dédiée à la préservation des océans et à la protection de la vie marine.
+            <br><br>Notre mission est claire et urgente : restaurer les océans en purifiant les déchets marins tout en préservant la vie qui en dépend.<br><br>
+            Dans un monde où les océans subissent une pression croissante due à la pollution plastique et aux déchets toxiques, chaque geste compte.
+            <br><br>Ensemble, nous pouvons faire une réelle différence et contribuer à un avenir durable pour les écosystèmes marins et les générations futures.
 
-        Dans un monde où les océans subissent une pression croissante due à la pollution plastique et aux déchets toxiques, chaque geste compte. Ensemble, nous pouvons faire une réelle différence et contribuer à un avenir durable pour les écosystèmes marins et les générations futures.
+        </p>
     </div>
-    <div>
-        <img id="images" src="{{url_for('static', filename='index_img1.jpg')}}">
-    </div>
+    <br>
+    <section>
+        <div>
+            <img id="image1" src="{{url_for('static', filename='index_img1.jpg')}}">
+        </div>
+        <div>
+            <img id="image2" src="{{url_for('static', filename='index_img2.png')}}">
+        </div>
+    </section>
+    <br>
+
     <div id="pourquoi_donner">
-        Pourquoi faire un don à OceanPurify ?
-        <br>
-        1. Restaurer la beauté des océans : Vos dons soutiennent nos efforts pour nettoyer les plages, les côtes et les fonds marins. Nous mobilisons des équipes de volontaires passionnés pour éliminer les débris plastiques et les déchets toxiques qui menacent la vie marine et dégradent nos océans.
-        <br>
-        2. Protéger la biodiversité marine : Les océans abritent une biodiversité incroyable, des majestueuses baleines aux délicates créatures coralliennes. Votre soutien nous permet de préserver ces écosystèmes fragiles et de protéger les espèces en danger, garantissant un environnement sain pour toutes les formes de vie.
-        <br>
-        3. Agir contre le changement climatique : Les océans jouent un rôle crucial dans la régulation du climat de notre planète. En éliminant les déchets marins et en préservant les habitats marins, nous contribuons à ralentir les effets néfastes du changement climatique et à préserver l'équilibre de notre écosystème mondial.
-        <br>
-        4. Soutenir l'innovation environnementale : Nous investissons dans la recherche et le développement de technologies innovantes pour lutter contre la pollution plastique et restaurer la santé de nos océans. Votre don aide à financer ces projets novateurs qui ont un impact concret sur notre environnement.
-        <br>
-        5. Participer à un mouvement mondial : En faisant un don à OceanPurify, vous devenez un acteur du changement. Rejoignez notre communauté mondiale d'amoureux des océans, de passionnés d'environnement et de défenseurs de la vie marine pour agir ensemble et protéger nos précieux océans.
+        <p id="pourquoi_donner_text">
+        <b>Pourquoi faire un don à OceanPurify ?</b>
+        <br><br>
+        <u>1. Restaurer la beauté des océans :</u> Vos dons soutiennent nos efforts pour nettoyer les plages, les côtes et les fonds marins. Nous mobilisons des équipes de volontaires passionnés pour éliminer les débris plastiques et les déchets toxiques qui menacent la vie marine et dégradent nos océans.
+        <br><br>
+        <u>2. Protéger la biodiversité marine :</u> Les océans abritent une biodiversité incroyable, des majestueuses baleines aux délicates créatures coralliennes. Votre soutien nous permet de préserver ces écosystèmes fragiles et de protéger les espèces en danger, garantissant un environnement sain pour toutes les formes de vie.
+        <br><br>
+        <u>3. Agir contre le changement climatique :</u> Les océans jouent un rôle crucial dans la régulation du climat de notre planète. En éliminant les déchets marins et en préservant les habitats marins, nous contribuons à ralentir les effets néfastes du changement climatique et à préserver l'équilibre de notre écosystème mondial.
+        <br><br>
+        <u>4. Soutenir l'innovation environnementale :</u> Nous investissons dans la recherche et le développement de technologies innovantes pour lutter contre la pollution plastique et restaurer la santé de nos océans. Votre don aide à financer ces projets novateurs qui ont un impact concret sur notre environnement.
+        <br><br>
+        <u>5. Participer à un mouvement mondial :</u> En faisant un don à OceanPurify, vous devenez un acteur du changement. Rejoignez notre communauté mondiale d'amoureux des océans, de passionnés d'environnement et de défenseurs de la vie marine pour agir ensemble et protéger nos précieux océans.
+        </p>
     </div>
-
-    <p>
-        <a href="{{url_for('form')}}">Faire un don</a>
-    </p>
-</section>
+    <br>
+    <section>
+        <div id="bouton_don">
+            <a id="styletxt" href="{{url_for('form')}}">Faire un don</a>
+        </div>
+        <div id="bouton_donateurs">
+            <a id="styletxt" href="{{url_for('liste_donateurs')}}">Liste des donateurs</a>
+        </div>
+    </section>
+    <br>
 {% endblock %}

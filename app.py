@@ -12,16 +12,17 @@ def index():
 def form():
     return render_template('form.html')
 
-@app.route('/liste_donateurs', methods=['POST'])
+@app.route('/liste_donateurs', methods=['GET', 'POST'])
 def liste_donateurs():
-    nom=request.values.get('nom')
-    prenom=request.values.get('prenom')
-    email=request.values.get('email')
-    adresse=request.values.get('adresse')
-    don=request.values.get('don')
-    comments=request.values.get('comments')
-    donateur=Don(nom, prenom, email, adresse, don, comments)
-    Data.stocker(donateur)
+    if request.method == 'POST':
+        nom=request.values.get('nom')
+        prenom=request.values.get('prenom')
+        email=request.values.get('email')
+        adresse=request.values.get('adresse')
+        don=request.values.get('don')
+        comments=request.values.get('comments')
+        donateur=Don(nom, prenom, email, adresse, don, comments)
+        Data.stocker(donateur)
     liste_donateurs=Data.recuperer_liste_donateurs()
     total_recolte=Data.total_recolte()
     return render_template('liste_donateurs.html', liste_donateurs=liste_donateurs, total_recolte=total_recolte)

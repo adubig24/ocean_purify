@@ -10,10 +10,10 @@
             <img class='img' src="{{url_for('static', filename = 'liste_donateurs_pic2.jpg')}}">
         </div>
         <div class="container2">
-            <p class="title">Liste des 23 derniers donateurs :</p>
+            <p class="title">Liste des 13 derniers donateurs :</p>
             <ul>
                 {% for donateur in liste_donateurs %}
-                    <li>{{ donateur.nom }} {{ donateur.prenom }} - Don : {{ donateur.don }} - Commentaires : {{ donateur.comments }}</li>
+                <br><b>{{ donateur.prenom }} {{ donateur.nom }} </b>- Don : {{ donateur.don }} € - Email : {{donateur.email}} <br> "{{ donateur.comments }}"<br>
                 {% endfor %}
             </ul>
         </div>

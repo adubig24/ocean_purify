@@ -16,7 +16,7 @@ class Data:
         
         cursor = Connexion.connexion()
 
-        request = "SELECT nom,prenom,email,adresse,don,comments FROM info_don ORDER BY id DESC LIMIT 20"
+        request = "SELECT nom,prenom,email,adresse,don,comments FROM info_don ORDER BY id DESC LIMIT 13"
         
         cursor.execute(request)
 
