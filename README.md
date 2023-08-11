@@ -20,3 +20,7 @@ Installez les dépendances avec la commande (sous linux) pip install -r "require
 
 Exécutez le fichier app.py de votre manière préférée (dans mon cas, sous VSCode) en vérifiant être dans l'environnement où les dépendances sont installées.
 Dans mon cas : source .venv/bin/activate
+
+## Navigation : 
+
+En tout temps, la bannière permet de revenir sur la page d'index.
