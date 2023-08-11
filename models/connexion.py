@@ -5,7 +5,7 @@ class Connexion:
     __PWD = 'example'
     __HOST = 'localhost'
     __PORT = '3307'
-    __DB = 'plateforme_de_don'
+    __DB = 'ocean_purify'
     __bdd = None
     __cursor = None
 

@@ -4,7 +4,8 @@ header
     display: inline-block;
     vertical-align: top;
     position: relative;
-    width: 90%;
+    width: 100%;
+    align-self: auto;
     min-width: 600px;
     background-color: white;
 }
@@ -37,15 +38,63 @@ a, a:visited, a:link, a:hover, a:active{
 body{
     background-image: url('wallpaper.png');
     background-size: cover;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
 }
 
 section {
     display: flex;
 }
 
+#images{
+    width:20%;
+}
+
 #description{
-    width: 30%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(to left, rgb(152, 152, 255), white);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.container { 
+    border: 2px solid white; 
+    border-radius: 10px;
+    width: 40%; 
+    height: 40%;
+ }
+.outer-container{
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container2 {
+    background-color: white;
+    text-align: center;
+    border: 2px solid rgb(168, 168, 255); 
+    border-radius: 10px;
+    width: 40%; 
+    height: 40%;
+}
+
+.img {
+    width: 100%;
+    vertical-align: auto;
+    border-radius: 10px;
+}
+
+.total_recolte{
+    border: 2px solid rgb(147, 147, 255);
+    color:white;
+    text-align: center;
+    width:15%;
+    margin-left: auto;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
 }

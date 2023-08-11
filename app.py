@@ -12,8 +12,8 @@ def index():
 def form():
     return render_template('form.html')
 
-@app.route('/resultat', methods=['POST'])
-def resultat():
+@app.route('/liste_donateurs', methods=['POST'])
+def liste_donateurs():
     nom=request.values.get('nom')
     prenom=request.values.get('prenom')
     email=request.values.get('email')
@@ -22,7 +22,9 @@ def resultat():
     comments=request.values.get('comments')
     donateur=Don(nom, prenom, email, adresse, don, comments)
     Data.stocker(donateur)
-    return render_template('resultat.html', nom=nom)
+    liste_donateurs=Data.recuperer_liste_donateurs()
+    total_recolte=Data.total_recolte()
+    return render_template('liste_donateurs.html', liste_donateurs=liste_donateurs, total_recolte=total_recolte)
 
 if __name__=='__main__':
     app.run(debug=True)

@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<br>
+<div class="container1"></div>
+    <div class="outer-container">
+        <div class="container">
+            <img class='img' src="{{url_for('static', filename = 'liste_donateurs_pic1.jpg')}}">
+            <img class='img' src="{{url_for('static', filename = 'liste_donateurs_pic2.jpg')}}">
+        </div>
+        <div class="container2">
+            <p class="title">Liste des 23 derniers donateurs :</p>
+            <ul>
+                {% for donateur in liste_donateurs %}
+                    <li>{{ donateur.nom }} {{ donateur.prenom }} - Don : {{ donateur.don }} - Commentaires : {{ donateur.comments }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+<p class="total_recolte">Total récolté : {{total_recolte}} €</p>
+
+{% endblock %}

@@ -3,7 +3,7 @@
 {% block content %}
 
 <h2>Formulaire</h2>
-<form action="{{url_for('resultat')}}" method="post">
+<form action="{{url_for('liste_donateurs')}}" method="post">
   <p><i>Complétez le formulaire. Les champs marqué par </i><em>*</em> sont <em>obligatoires</em></p>
   <fieldset>
     <legend>Informations personnelles :</legend>
@@ -22,8 +22,8 @@
       <input id="don" name="don" type="number" placeholder="0" pattern="[0-9]*" required=""><br>
       <label for="comments">Espace vide pour nous laisser un message si vous le désirez :</label>
       <textarea id="comments", name="comments"></textarea>
-
-      <input type="checkbox" name="conditions" id="conditions"> En cochant cette case, j'accepte les conditions relatives au don caritatif.
+      <br><br>
+      <input type="checkbox" name="conditions" id="conditions" required> En cochant cette case, j'accepte les conditions relatives au don caritatif.
   </fieldset>
   <p><input type="submit" value="Soumettre"></p>
 </form>
